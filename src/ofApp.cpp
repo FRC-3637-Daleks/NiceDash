@@ -10,11 +10,19 @@ void ofApp::setup(){
     uiPanelStatus *status = new uiPanelStatus();
     status->setLocation(10, 10);
     panels.push_back(status);
+
+    mosqpp::lib_init();
+
+    mqtt_obj = new mqtt("NiceDash");
+    std::cout << "Connecting" << std::endl;
+    mqtt_obj->connect("10.36.37.2", 1180);
+    std::cout << "Connected" << std::endl;
+    mqtt_obj->loop_start();
+
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
 }
 
 //--------------------------------------------------------------
@@ -69,7 +77,7 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 
 //--------------------------------------------------------------
 void ofApp::exit(){
-
+    mosqpp::lib_cleanup();
 }
 
 //--------------------------------------------------------------

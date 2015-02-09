@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "ofxUI.h"
 
+#include "mqtt.h"
 #include "uiPanel.h"
 #include "uiPanelStatus.h"
 
@@ -26,5 +27,6 @@ class ofApp : public ofBaseApp{
         void guiEvent(ofxUIEventArgs &e);
 
     private:
+        mqtt *mqtt_obj;
         std::vector<uiPanel *> panels;
 };
