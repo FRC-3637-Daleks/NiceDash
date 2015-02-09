@@ -2,7 +2,14 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    ofBackground(65.0f);
+    ofSetFrameRate(60);
+    ofSetVerticalSync(true);
+    ofEnableSmoothing();
 
+    uiPanelStatus *status = new uiPanelStatus();
+    status->setLocation(10, 10);
+    panels.push_back(status);
 }
 
 //--------------------------------------------------------------
@@ -57,5 +64,15 @@ void ofApp::gotMessage(ofMessage msg){
 
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
+
+}
+
+//--------------------------------------------------------------
+void ofApp::exit(){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::guiEvent(ofxUIEventArgs &e){
 
 }

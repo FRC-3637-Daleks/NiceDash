@@ -1,6 +1,10 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxUI.h"
+
+#include "uiPanel.h"
+#include "uiPanelStatus.h"
 
 class ofApp : public ofBaseApp{
 
@@ -18,5 +22,9 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		
+        void exit();
+        void guiEvent(ofxUIEventArgs &e);
+
+    private:
+        std::vector<uiPanel *> panels;
 };
