@@ -39,8 +39,6 @@ uiPanelPDP::uiPanelPDP() : uiPanel("PDP")
 
     gui->autoSizeToFitWidgets();
     gui->setWidth(UIPANEL_DEFAULT_WIDTH);
-
-
 }
 
 uiPanelPDP::~uiPanelPDP()
@@ -55,4 +53,6 @@ void uiPanelPDP::update(mqtt *mqtt_obj)
         ui.current[i]->setValue(float(mqtt_obj->getData(key.str())));
     }
 
+    ui.voltage->setValue(float(mqtt_obj->getData("pdp/voltage")));
+    ui.temperature->setValue(float(mqtt_obj->getData("pdp/temperature")));
 }
