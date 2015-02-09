@@ -8,7 +8,7 @@
 
 #include "mqtt.h"
 
-mqtt::mqtt(const char* id) : mosqpp::mosquittopp(id)
+mqtt::mqtt() : mosqpp::mosquittopp()
 {
     status = mqtt::STATUS_DISCONNECTED;
 }

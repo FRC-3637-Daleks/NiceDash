@@ -22,7 +22,7 @@ public:
         STATUS_CONNECTED
     };
 
-    mqtt(const char* id);
+    mqtt();
     ~mqtt();
 
     void on_connect(int rc);

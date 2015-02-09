@@ -6,6 +6,7 @@
 #include "mqtt.h"
 #include "uiPanel.h"
 #include "uiPanelStatus.h"
+#include "uiPanelPDP.h"
 
 class ofApp : public ofBaseApp{
 

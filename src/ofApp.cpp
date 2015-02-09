@@ -11,10 +11,14 @@ void ofApp::setup(){
     status->setLocation(10, 10);
     panels.push_back(status);
 
+    uiPanelPDP *pdp = new uiPanelPDP();
+    pdp->setLocation(panels.back()->getLowerLeftX(), panels.back()->getLowerLeftY() + 10);
+    panels.push_back(pdp);
+
     mosqpp::lib_init();
 
-    mqtt_obj = new mqtt("NiceDash");
-    std::cout << "Connecting" << std::endl;
+    mqtt_obj = new mqtt();
+    std::cout << "Connecting..." << std::endl;
     mqtt_obj->connect("10.36.37.2", 1180);
     std::cout << "Connected" << std::endl;
     mqtt_obj->loop_start();

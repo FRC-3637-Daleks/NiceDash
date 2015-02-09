@@ -27,6 +27,7 @@
 		112BD1D11A890C0E0071AD92 /* util_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 112BD1BE1A890C0E0071AD92 /* util_mosq.c */; };
 		112BD1D21A890C0E0071AD92 /* will_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 112BD1C01A890C0E0071AD92 /* will_mosq.c */; };
 		112BD1D81A891A720071AD92 /* mqtt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 112BD1D71A891A720071AD92 /* mqtt.cpp */; };
+		112BD1DC1A893F080071AD92 /* uiPanelPDP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 112BD1DA1A893F080071AD92 /* uiPanelPDP.cpp */; };
 		112F5FB41A88FF9500335A6E /* uiPanelStatus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 112F5FB31A88FF9500335A6E /* uiPanelStatus.cpp */; };
 		112F5FB71A89013200335A6E /* uiPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 112F5FB61A89013200335A6E /* uiPanel.cpp */; };
 		1587708E3CAC72997E43504E /* ofxUIRangeSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2813E36CEFD8D1C1B70E600 /* ofxUIRangeSlider.cpp */; };
@@ -169,6 +170,8 @@
 		112BD1D61A891A720071AD92 /* mqtt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mqtt.h; sourceTree = "<group>"; };
 		112BD1D71A891A720071AD92 /* mqtt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mqtt.cpp; sourceTree = "<group>"; };
 		112BD1D91A89270D0071AD92 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		112BD1DA1A893F080071AD92 /* uiPanelPDP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uiPanelPDP.cpp; sourceTree = "<group>"; };
+		112BD1DB1A893F080071AD92 /* uiPanelPDP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uiPanelPDP.h; sourceTree = "<group>"; };
 		112F5FB21A88FF8000335A6E /* uiPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uiPanel.h; sourceTree = "<group>"; };
 		112F5FB31A88FF9500335A6E /* uiPanelStatus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uiPanelStatus.cpp; sourceTree = "<group>"; };
 		112F5FB51A88FF9C00335A6E /* uiPanelStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uiPanelStatus.h; sourceTree = "<group>"; };
@@ -585,6 +588,8 @@
 				112F5FB21A88FF8000335A6E /* uiPanel.h */,
 				112F5FB31A88FF9500335A6E /* uiPanelStatus.cpp */,
 				112F5FB51A88FF9C00335A6E /* uiPanelStatus.h */,
+				112BD1DA1A893F080071AD92 /* uiPanelPDP.cpp */,
+				112BD1DB1A893F080071AD92 /* uiPanelPDP.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -753,6 +758,7 @@
 				112BD1D21A890C0E0071AD92 /* will_mosq.c in Sources */,
 				82845E1F8C90E1F5A99D9868 /* ofxUIWidget.cpp in Sources */,
 				112F5FB71A89013200335A6E /* uiPanel.cpp in Sources */,
+				112BD1DC1A893F080071AD92 /* uiPanelPDP.cpp in Sources */,
 				112BD1CF1A890C0E0071AD92 /* time_mosq.c in Sources */,
 				CE5D89B9893EAA12F511DCAC /* ofxUIWidgetWithLabel.cpp in Sources */,
 			);
