@@ -10,12 +10,18 @@
 #define __NiceDash__mqtt__
 
 #include <iostream>
+#include <map>
 
 #include "mosquitto/cpp/mosquittopp.h"
 
 class mqtt : public mosqpp::mosquittopp
 {
 public:
+    enum mqtt_status {
+        STATUS_DISCONNECTED,
+        STATUS_CONNECTED
+    };
+
     mqtt(const char* id);
     ~mqtt();
 
@@ -23,7 +29,12 @@ public:
     void on_disconnect(int rc);
     void on_message(const struct mosquitto_message *message);
 
-    void start_thread();
+    mqtt_status getStatus() { return status; };
+    double getData(std::string key);
+
+private:
+    mqtt_status status;
+    std::map<std::string, double> data;
 };
 
 #endif /* defined(__NiceDash__mqtt__) */

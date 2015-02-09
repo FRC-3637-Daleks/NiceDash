@@ -10,6 +10,7 @@
 
 mqtt::mqtt(const char* id) : mosqpp::mosquittopp(id)
 {
+    status = mqtt::STATUS_DISCONNECTED;
 }
 
 mqtt::~mqtt()
@@ -19,22 +20,34 @@ mqtt::~mqtt()
 void mqtt::on_connect(int rc)
 {
     std::cout << "on_connect: " << rc << std::endl;
-    // Subscribe to all functions
+    // Subscribe to all
     if(rc){
         std::cout << "Failed to connect! rc: " << rc << std::endl;
+        status = mqtt::STATUS_DISCONNECTED;
     }else{
-        subscribe(NULL, "$SYS/broker/clients/total", 0);
+        subscribe(NULL, "$SYS/broker/clients/#", 0);
+        subscribe(NULL, "#", 0);
+        status = mqtt::STATUS_CONNECTED;
     }
-    return;
 }
 
 void mqtt::on_disconnect(int rc)
 {
     std::cout << "on_disconnect: " << rc << std::endl;
+    status = mqtt::STATUS_DISCONNECTED;
 }
 
 void mqtt::on_message(const struct mosquitto_message *message)
 {
-    // Update value in local data store
-    std::cout << (char*)message->topic << ": " << (char*)message->payload << std::endl;
+    std::string topic = (char*)message->topic;
+    std::string payload = (char*)message->payload;
+
+    std::cout << topic << ": " << payload << std::endl;
+
+    data[std::string((char*)message->topic)] = atof(payload.c_str());
+}
+
+double mqtt::getData(std::string key)
+{
+    return data[key];
 }

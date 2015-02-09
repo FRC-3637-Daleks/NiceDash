@@ -9,6 +9,8 @@
 #ifndef __NiceDash__uiPanelStatus__
 #define __NiceDash__uiPanelStatus__
 
+#include <sstream>
+
 #include "ofxUI.h"
 
 #include "uiPanel.h"
@@ -19,12 +21,13 @@ public:
     uiPanelStatus();
     ~uiPanelStatus();
 
-    void update();
-    
-private:
+    void update(mqtt *mqtt_obj);
 
+private:
     struct status_ui {
-        ofxUILabel* conn_status;
+        ofxUILabel *conn_status;
+        ofxUILabel *clients_connected;
+        ofxUILabel *clients_active;
     } ui;
 };
 

@@ -23,6 +23,9 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
+    for(vector<uiPanel *>::iterator panel = panels.begin(); panel != panels.end(); panel++) {
+        (*panel)->update(mqtt_obj);
+    }
 }
 
 //--------------------------------------------------------------
