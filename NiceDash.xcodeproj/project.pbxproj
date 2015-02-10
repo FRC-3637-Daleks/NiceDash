@@ -30,6 +30,7 @@
 		112BD1DC1A893F080071AD92 /* uiPanelPDP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 112BD1DA1A893F080071AD92 /* uiPanelPDP.cpp */; };
 		112F5FB41A88FF9500335A6E /* uiPanelStatus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 112F5FB31A88FF9500335A6E /* uiPanelStatus.cpp */; };
 		112F5FB71A89013200335A6E /* uiPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 112F5FB61A89013200335A6E /* uiPanel.cpp */; };
+		117C12BD1A89B1B80039D9D5 /* mqtt_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117C12BB1A89B1B80039D9D5 /* mqtt_thread.cpp */; };
 		1587708E3CAC72997E43504E /* ofxUIRangeSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2813E36CEFD8D1C1B70E600 /* ofxUIRangeSlider.cpp */; };
 		1DAAC3FB4B98B08AE63F4687 /* ofxUISuperCanvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38EBD5650A3BF5A499B07525 /* ofxUISuperCanvas.cpp */; };
 		22030CBDCC25D815E7ED6757 /* ofxUIFPSSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E7E592342D8B7FB73A6F64D /* ofxUIFPSSlider.cpp */; };
@@ -176,6 +177,8 @@
 		112F5FB31A88FF9500335A6E /* uiPanelStatus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uiPanelStatus.cpp; sourceTree = "<group>"; };
 		112F5FB51A88FF9C00335A6E /* uiPanelStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uiPanelStatus.h; sourceTree = "<group>"; };
 		112F5FB61A89013200335A6E /* uiPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = uiPanel.cpp; sourceTree = "<group>"; };
+		117C12BB1A89B1B80039D9D5 /* mqtt_thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mqtt_thread.cpp; sourceTree = "<group>"; };
+		117C12BC1A89B1B80039D9D5 /* mqtt_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mqtt_thread.h; sourceTree = "<group>"; };
 		1553D7111BCBE7834BCC0784 /* ofxUI2DPad.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUI2DPad.cpp; path = ../../../addons/ofxUI/src/ofxUI2DPad.cpp; sourceTree = SOURCE_ROOT; };
 		15C99204FF4D8D72AD034B63 /* ofxUINumberDialer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxUINumberDialer.h; path = ../../../addons/ofxUI/src/ofxUINumberDialer.h; sourceTree = SOURCE_ROOT; };
 		17E06821FB98542FDB806E50 /* ofxUIMultiImageButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxUIMultiImageButton.cpp; path = ../../../addons/ofxUI/src/ofxUIMultiImageButton.cpp; sourceTree = SOURCE_ROOT; };
@@ -584,6 +587,8 @@
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
 				112BD1D71A891A720071AD92 /* mqtt.cpp */,
 				112BD1D61A891A720071AD92 /* mqtt.h */,
+				117C12BB1A89B1B80039D9D5 /* mqtt_thread.cpp */,
+				117C12BC1A89B1B80039D9D5 /* mqtt_thread.h */,
 				112F5FB61A89013200335A6E /* uiPanel.cpp */,
 				112F5FB21A88FF8000335A6E /* uiPanel.h */,
 				112F5FB31A88FF9500335A6E /* uiPanelStatus.cpp */,
@@ -735,6 +740,7 @@
 				E3D59A6B55F05669B3FBF8BD /* ofxUINumberDialer.cpp in Sources */,
 				D60E54E7FD6E19BC8636E0D2 /* ofxUIRadio.cpp in Sources */,
 				1587708E3CAC72997E43504E /* ofxUIRangeSlider.cpp in Sources */,
+				117C12BD1A89B1B80039D9D5 /* mqtt_thread.cpp in Sources */,
 				59C5F2F5D7254C33C00F97CB /* ofxUIRectangle.cpp in Sources */,
 				FE0F1DB69ACCD163E9DA2A15 /* ofxUIRotarySlider.cpp in Sources */,
 				43BADBB2FE0F17D34B57A705 /* ofxUIScrollableCanvas.cpp in Sources */,
