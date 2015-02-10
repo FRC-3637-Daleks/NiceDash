@@ -65,11 +65,15 @@ void _windows_time_version_check(void)
 time_t mosquitto_time(void)
 {
 #ifdef WIN32
+#if 0
 	if(tick64){
 		return GetTickCount64()/1000;
 	}else{
+#endif
 		return GetTickCount()/1000; /* FIXME - need to deal with overflow. */
+#if 0
 	}
+#endif
 #elif _POSIX_TIMERS>0 && defined(_POSIX_MONOTONIC_CLOCK)
 	struct timespec tp;
 

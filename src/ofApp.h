@@ -4,6 +4,7 @@
 #include "ofxUI.h"
 
 #include "mqtt.h"
+#include "mqtt_thread.h"
 #include "uiPanel.h"
 #include "uiPanelStatus.h"
 #include "uiPanelPDP.h"
@@ -29,5 +30,6 @@ class ofApp : public ofBaseApp{
 
     private:
         mqtt *mqtt_obj;
+        mqtt_thread *thread;
         std::vector<uiPanel *> panels;
 };

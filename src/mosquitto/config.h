@@ -11,6 +11,7 @@
 #ifndef NiceDash_config_h
 #define NiceDash_config_h
 
-#define WITH_THREADING
+// No pthreads on windows :(
+//#define WITH_THREADING
 
 #endif

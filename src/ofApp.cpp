@@ -19,10 +19,10 @@ void ofApp::setup(){
 
     mqtt_obj = new mqtt();
     std::cout << "Connecting..." << std::endl;
-    mqtt_obj->connect("10.36.37.2", 1180);
-    std::cout << "Connected" << std::endl;
-    mqtt_obj->loop_start();
+    mqtt_obj->connect_async("10.36.37.2", 1180);
 
+    thread = new mqtt_thread(mqtt_obj);
+    thread->startThread(false);
 }
 
 //--------------------------------------------------------------
@@ -78,12 +78,13 @@ void ofApp::gotMessage(ofMessage msg){
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::dragEvent(ofDragInfo dragInfo){
 
 }
 
 //--------------------------------------------------------------
 void ofApp::exit(){
+    thread->stopThread();
     mosqpp::lib_cleanup();
 }
 

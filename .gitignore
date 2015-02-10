@@ -5,6 +5,8 @@
 
 build/
 bin/*.app
+bin/*.exe
+bin/*.dll
 obj/
 
 *.pbxuser
@@ -15,3 +17,6 @@ obj/
 *.mode2v3
 
 xcuserdata
+
+*.layout
+*.cscope_file_list

@@ -121,7 +121,6 @@ void *_mosquitto_realloc(void *ptr, size_t size)
 char *_mosquitto_strdup(const char *s)
 {
 	char *str = strdup(s);
-
 #ifdef REAL_WITH_MEMORY_TRACKING
 	memcount += malloc_usable_size(str);
 	if(memcount > max_memcount){

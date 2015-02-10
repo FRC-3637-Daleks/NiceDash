@@ -37,8 +37,15 @@ POSSIBILITY OF SUCH DAMAGE.
 #include <sys/socket.h>
 #include <unistd.h>
 #else
+#define _WIN32_WINNT 0x501
 #include <winsock2.h>
 #include <ws2tcpip.h>
+#endif
+
+#ifdef WIN32
+#define EINPROGRESS WSAEINPROGRESS
+#define EPROTO -15
+#define AI_ADDRCONFIG 0
 #endif
 
 #ifdef __ANDROID__
@@ -273,7 +280,7 @@ int _mosquitto_try_connect(const char *host, uint16_t port, int *sock, const cha
 	for(rp = ainfo; rp != NULL; rp = rp->ai_next){
 		*sock = socket(rp->ai_family, rp->ai_socktype, rp->ai_protocol);
 		if(*sock == INVALID_SOCKET) continue;
-		
+
 		if(rp->ai_family == PF_INET){
 			((struct sockaddr_in *)rp->ai_addr)->sin_port = htons(port);
 		}else if(rp->ai_family == PF_INET6){
@@ -758,7 +765,7 @@ int _mosquitto_packet_write(struct mosquitto *mosq)
 			}
 			pthread_mutex_unlock(&mosq->callback_mutex);
 		}else if(((packet->command)&0xF0) == DISCONNECT){
-			/* FIXME what cleanup needs doing here? 
+			/* FIXME what cleanup needs doing here?
 			 * incoming/outgoing messages? */
 			_mosquitto_socket_close(mosq);
 

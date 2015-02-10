@@ -37,15 +37,8 @@ This product includes software written by Tim Hudson (tjh@cryptsoft.com)
 #ifndef _MOSQUITTOPP_H_
 #define _MOSQUITTOPP_H_
 
-#ifdef _WIN32
-#	ifdef mosquittopp_EXPORTS
-#		define mosqpp_EXPORT  __declspec(dllexport)
-#	else
-#		define mosqpp_EXPORT  __declspec(dllimport)
-#	endif
-#else
-#	define mosqpp_EXPORT
-#endif
+
+#define mosqpp_EXPORT
 
 #include <cstdlib>
 #include <time.h>
@@ -107,7 +100,7 @@ class mosqpp_EXPORT mosquittopp {
 		int loop_start();
 		int loop_stop(bool force=false);
 		bool want_write();
-		
+
 		virtual void on_connect(int rc) {return;};
 		virtual void on_disconnect(int rc) {return;};
 		virtual void on_publish(int mid) {return;};

@@ -1919,25 +1919,26 @@
 	"ofMain.h"
 	"ofApp.h"
 
-1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\ofapp.h
+1423528542 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\ofapp.h
 	"ofMain.h"
 	"ofxUI.h"
 	"mqtt.h"
+	"mqtt_thread.h"
 	"uiPanel.h"
 	"uiPanelStatus.h"
 	"uiPanelPDP.h"
 
-1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mqtt.h
+1423528611 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mqtt.h
 	<iostream>
 	<map>
 	"mosquitto/cpp/mosquittopp.h"
 
-1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\cpp\mosquittopp.h
+1423530451 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\cpp\mosquittopp.h
 	<cstdlib>
 	<time.h>
 	<mosquitto.h>
 
-1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\mosquitto.h
+1423530435 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\mosquitto.h
 	<stdbool.h>
 
 1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\uipanel.h
@@ -1954,6 +1955,304 @@
 	"ofxUI.h"
 	"uiPanel.h"
 
-1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\ofapp.cpp
+1423537126 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\ofapp.cpp
 	"ofApp.h"
+
+1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\cpp\mosquittopp.cpp
+	<cstdlib>
+	<mosquitto.h>
+	<mosquittopp.h>
+
+1423529487 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mqtt_thread.h
+	"ofMain.h"
+	"mqtt.h"
+
+1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\logging_mosq.c
+	<assert.h>
+	<stdarg.h>
+	<stdio.h>
+	<string.h>
+	"mosquitto_internal.h"
+	"mosquitto.h"
+	"memory_mosq.h"
+
+1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\mosquitto_internal.h
+	"config.h"
+	<winsock2.h>
+	<openssl/ssl.h>
+	<stdlib.h>
+	<pthread.h>
+	<dummypthread.h>
+	<ares.h>
+	<stdint.h>
+	<stdint.h>
+	"mosquitto.h"
+	"time_mosq.h"
+
+1423526973 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\config.h
+
+1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\dummypthread.h
+
+1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\time_mosq.h
+	<time.h>
+
+1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\memory_mosq.h
+	<stdio.h>
+	<sys/types.h>
+
+1423532401 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\memory_mosq.c
+	"config.h"
+	<stdlib.h>
+	<string.h>
+	"memory_mosq.h"
+	<malloc/malloc.h>
+	<malloc_np.h>
+	<malloc.h>
+
+1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\messages_mosq.c
+	<assert.h>
+	<stdlib.h>
+	<string.h>
+	"mosquitto_internal.h"
+	"mosquitto.h"
+	"memory_mosq.h"
+	"messages_mosq.h"
+	"send_mosq.h"
+	"time_mosq.h"
+
+1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\messages_mosq.h
+	"mosquitto_internal.h"
+	"mosquitto.h"
+
+1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\send_mosq.h
+	"mosquitto.h"
+
+1423532755 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\mosquitto.c
+	<assert.h>
+	<errno.h>
+	<signal.h>
+	<stdio.h>
+	<string.h>
+	<sys/select.h>
+	<sys/time.h>
+	<unistd.h>
+	<winsock2.h>
+	<windows.h>
+	"mosquitto.h"
+	"mosquitto_internal.h"
+	"logging_mosq.h"
+	"messages_mosq.h"
+	"memory_mosq.h"
+	"mqtt3_protocol.h"
+	"net_mosq.h"
+	"read_handle.h"
+	"send_mosq.h"
+	"time_mosq.h"
+	"tls_mosq.h"
+	"util_mosq.h"
+	"will_mosq.h"
+
+1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\logging_mosq.h
+	"mosquitto.h"
+
+1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\mqtt3_protocol.h
+
+1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\net_mosq.h
+	<unistd.h>
+	<winsock2.h>
+	"mosquitto_internal.h"
+	"mosquitto.h"
+
+1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\read_handle.h
+	"mosquitto.h"
+
+1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\tls_mosq.h
+	<openssl/ssl.h>
+
+1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\util_mosq.h
+	<stdio.h>
+	"tls_mosq.h"
+	"mosquitto.h"
+
+1423525967 c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\will_mosq.h
+	"mosquitto.h"
+	"mosquitto_internal.h"
+
+1423537070 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\net_mosq.c
+	<assert.h>
+	<errno.h>
+	<fcntl.h>
+	<stdio.h>
+	<string.h>
+	<netdb.h>
+	<sys/socket.h>
+	<unistd.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+	<linux/in.h>
+	<linux/in6.h>
+	<sys/endian.h>
+	<netinet/in.h>
+	<netinet/in.h>
+	<net/netbyte.h>
+	<netinet/in.h>
+	<openssl/err.h>
+	<tls_mosq.h>
+	<mosquitto_broker.h>
+	<read_handle.h>
+	"logging_mosq.h"
+	"memory_mosq.h"
+	"mqtt3_protocol.h"
+	"net_mosq.h"
+	"time_mosq.h"
+	"util_mosq.h"
+
+1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\read_handle.c
+	<assert.h>
+	<stdio.h>
+	<string.h>
+	"mosquitto.h"
+	"logging_mosq.h"
+	"memory_mosq.h"
+	"messages_mosq.h"
+	"mqtt3_protocol.h"
+	"net_mosq.h"
+	"read_handle.h"
+	"send_mosq.h"
+	"time_mosq.h"
+	"util_mosq.h"
+
+1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\read_handle_client.c
+	<assert.h>
+	"mosquitto.h"
+	"logging_mosq.h"
+	"memory_mosq.h"
+	"net_mosq.h"
+	"read_handle.h"
+
+1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\read_handle_shared.c
+	<assert.h>
+	<stdio.h>
+	<string.h>
+	"mosquitto.h"
+	"logging_mosq.h"
+	"memory_mosq.h"
+	"messages_mosq.h"
+	"mqtt3_protocol.h"
+	"net_mosq.h"
+	"read_handle.h"
+	"send_mosq.h"
+	"util_mosq.h"
+	"mosquitto_broker.h"
+
+1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\send_client_mosq.c
+	<assert.h>
+	<string.h>
+	"mosquitto.h"
+	"logging_mosq.h"
+	"memory_mosq.h"
+	"mqtt3_protocol.h"
+	"net_mosq.h"
+	"send_mosq.h"
+	"util_mosq.h"
+	"mosquitto_broker.h"
+
+1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\send_mosq.c
+	<assert.h>
+	<stdio.h>
+	<string.h>
+	"mosquitto.h"
+	"mosquitto_internal.h"
+	"logging_mosq.h"
+	"mqtt3_protocol.h"
+	"memory_mosq.h"
+	"net_mosq.h"
+	"send_mosq.h"
+	"time_mosq.h"
+	"util_mosq.h"
+	"mosquitto_broker.h"
+
+1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\srv_mosq.c
+	<ares.h>
+	<arpa/nameser.h>
+	<stdio.h>
+	<string.h>
+	"logging_mosq.h"
+	"memory_mosq.h"
+	"mosquitto_internal.h"
+	"mosquitto.h"
+
+1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\thread_mosq.c
+	"config.h"
+	<unistd.h>
+	"mosquitto_internal.h"
+	"net_mosq.h"
+
+1423530718 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\time_mosq.c
+	<mach/mach.h>
+	<mach/mach_time.h>
+	<windows.h>
+	<unistd.h>
+	<time.h>
+	"mosquitto.h"
+	"time_mosq.h"
+
+1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\tls_mosq.c
+	<winsock2.h>
+	<ws2tcpip.h>
+	<arpa/inet.h>
+	<string.h>
+	<openssl/conf.h>
+	<openssl/x509v3.h>
+	<openssl/ssl.h>
+	"mosquitto_broker.h"
+	"mosquitto_internal.h"
+	"tls_mosq.h"
+
+1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\util_mosq.c
+	<assert.h>
+	<string.h>
+	<winsock2.h>
+	"mosquitto.h"
+	"memory_mosq.h"
+	"net_mosq.h"
+	"send_mosq.h"
+	"time_mosq.h"
+	"tls_mosq.h"
+	"util_mosq.h"
+	"mosquitto_broker.h"
+
+1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mosquitto\will_mosq.c
+	<assert.h>
+	<errno.h>
+	<stdio.h>
+	<string.h>
+	<sys/select.h>
+	<unistd.h>
+	<winsock2.h>
+	"mosquitto.h"
+	"mosquitto_internal.h"
+	"logging_mosq.h"
+	"messages_mosq.h"
+	"memory_mosq.h"
+	"mqtt3_protocol.h"
+	"net_mosq.h"
+	"read_handle.h"
+	"send_mosq.h"
+	"util_mosq.h"
+
+1423528619 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mqtt.cpp
+	"mqtt.h"
+
+1423529340 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\mqtt_thread.cpp
+	"mqtt_thread.h"
+
+1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\uipanel.cpp
+	"uiPanel.h"
+
+1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\uipanelpdp.cpp
+	"uiPanelPDP.h"
+
+1423525967 source:c:\frc\of_v0.8.4_win_cb_release\apps\myapps\nicedash\src\uipanelstatus.cpp
+	"uiPanelStatus.h"
 
