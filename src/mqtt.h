@@ -31,10 +31,12 @@ public:
 
     mqtt_status getStatus() { return status; };
     double getData(std::string key);
+    std::string getDataRaw(std::string key);
 
 private:
     mqtt_status status;
     std::map<std::string, double> data;
+    std::map<std::string, std::string> data_raw;
 };
 
 #endif /* defined(__NiceDash__mqtt__) */

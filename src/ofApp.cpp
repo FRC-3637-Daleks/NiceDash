@@ -11,9 +11,13 @@ void ofApp::setup(){
     status->setLocation(10, 10);
     panels.push_back(status);
 
-    uiPanelPDP *pdp = new uiPanelPDP();
-    pdp->setLocation(panels.back()->getLowerLeftX(), panels.back()->getLowerLeftY() + 10);
-    panels.push_back(pdp);
+    //uiPanelPDP *pdp = new uiPanelPDP();
+    //pdp->setLocation(panels.back()->getLowerLeftX(), panels.back()->getLowerLeftY() + 10);
+    //panels.push_back(pdp);
+
+    uiPanelConfig *config = new uiPanelConfig();
+    config->setLocation(panels.back()->getUpperRightX() + 10, panels.back()->getUpperLeftY());
+    panels.push_back(config);
 
     mosqpp::lib_init();
 

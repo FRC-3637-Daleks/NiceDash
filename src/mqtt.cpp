@@ -44,10 +44,16 @@ void mqtt::on_message(const struct mosquitto_message *message)
 
     std::cout << topic << ": " << payload << std::endl;
 
+    data_raw[std::string((char*)message->topic)] = std::string(payload.c_str());
     data[std::string((char*)message->topic)] = atof(payload.c_str());
 }
 
 double mqtt::getData(std::string key)
 {
     return data[key];
+}
+
+std::string mqtt::getDataRaw(std::string key)
+{
+    return data_raw[key];
 }

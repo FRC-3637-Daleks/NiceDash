@@ -532,6 +532,10 @@
 			<Option virtualFolder="src/" />
 		</Unit>
 		<Unit filename="src/uiPanel.h" />
+		<Unit filename="src/uiPanelConfig.cpp">
+			<Option virtualFolder="src/" />
+		</Unit>
+		<Unit filename="src/uiPanelConfig.h" />
 		<Unit filename="src/uiPanelPDP.cpp">
 			<Option virtualFolder="src/" />
 		</Unit>

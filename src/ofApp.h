@@ -6,6 +6,7 @@
 #include "mqtt.h"
 #include "mqtt_thread.h"
 #include "uiPanel.h"
+#include "uiPanelConfig.h"
 #include "uiPanelStatus.h"
 #include "uiPanelPDP.h"
 
